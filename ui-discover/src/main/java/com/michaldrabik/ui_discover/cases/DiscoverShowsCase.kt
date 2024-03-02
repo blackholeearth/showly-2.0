@@ -60,6 +60,8 @@ internal class DiscoverShowsCase @Inject constructor(
     val showAnticipated = !filters.hideAnticipated
     val showCollection = !filters.hideCollection
     val genres = filters.genres.toList()
+    val genrestoExclude = filters.genrestoExclude.toList()
+        
     val networks = filters.networks.toList()
 
     val myAsync = async { showsRepository.myShows.loadAllIds() }
@@ -73,6 +75,7 @@ internal class DiscoverShowsCase @Inject constructor(
       showCollection,
       collectionSize,
       genres,
+      genrestoExclude,
       networks
     )
 
