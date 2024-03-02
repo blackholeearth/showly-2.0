@@ -47,6 +47,13 @@
         />
 
       <com.google.android.material.chip.Chip
+        android:id="@+id/discoverGenrestoExcludeChip"
+        style="@style/ShowlyChip.Filter"
+        android:checkable="false"
+        android:text="@string/textGenrestoExclude"
+        />
+      
+      <com.google.android.material.chip.Chip
         android:id="@+id/discoverCollectionChip"
         style="@style/ShowlyChip.Filter"
         android:text="@string/textDiscoverFilterCollection"
