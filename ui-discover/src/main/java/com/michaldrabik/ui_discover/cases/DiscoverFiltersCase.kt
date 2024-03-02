@@ -27,6 +27,7 @@ class DiscoverFiltersCase @Inject constructor(
         hideAnticipated = !settings.showAnticipatedShows,
         hideCollection = !settings.showCollectionShows,
         genres = settings.discoverFilterGenres.toList(),
+        genrestoExclude = settings.discoverFilterGenrestoExclude.toList(),
         networks = settings.discoverFilterNetworks.toList()
       )
     }
@@ -44,6 +45,7 @@ class DiscoverFiltersCase @Inject constructor(
               settings.copy(
                 discoverFilterFeed = initial.feedOrder,
                 discoverFilterGenres = initial.genres,
+                discoverFilterGenrestoExclude = initial.genrestoExclude,
                 discoverFilterNetworks = initial.networks,
                 showAnticipatedShows = !initial.hideAnticipated,
                 showCollectionShows = !initial.hideCollection
